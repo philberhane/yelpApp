@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Moving Company</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top" style="background-color: rgba(0, 118, 255, 0.25)" class="resultsBody">
+  <div class="container">
+  <div id="helloMessage" class="row" style="margin-top: 25px;">
+     <div class="col-md-7 col-sm-12">
+      <h1 id="headerStatement" ></h1>
+      <p>Call or email to contact your mover now.</p>
+      </div>
+      <div class="col-md-5 col-sm-12">
+          <div id="userCode" class="btn" style="background-color: rgba(0, 0, 255, 0.5); color: white"></div>
+      </div>
+  </div>
+  
+  <div class="row" id="wholeThing">
+  
+  <div class="col-lg-4 col-md-12" id="small-p">
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+     
+      <h4 >Your Details</h4>
+     <div class="row" style="margin-top: 25px; border-top: 1px solid rgba(0, 0, 0, 0.19)">
+        <div class="col-sm-2" style="margin-top: 30px">
+            <i class="fas fa-truck" style="color: #FED136"></i>
+        </div>
+        
+        <div class="col-sm-10" style="margin-top: 20px">
+            <h6>Pickup Location:</h6>
+            <p style="font-size: 14px" id="fromLocation"></p>
+        </div>
+         
+         
+     </div>
+     
+     <div class="row" style="border-top: 1px solid rgba(0, 0, 0, 0.19)">
+        <div class="col-sm-2" style="margin-top: 30px">
+            <i class="fas fa-truck" style="color: #FED136"></i>
+        </div>
+        
+        <div class="col-sm-10" style="margin-top: 20px">
+            <h6>Drop-off Location:</h6>
+            <p style="font-size: 14px" id="toLocation"></p>
+        </div>
+         
+         
+     </div>
+     
+     <div class="row" style="border-top: 1px solid rgba(0, 0, 0, 0.19)">
+        <div class="col-sm-2" style="margin-top: 30px">
+            <i class="fas fa-home" style="color: #FED136"></i>
+        </div>
+        
+        <div class="col-sm-10" style="margin-top: 20px">
+            <h6>Bedrooms:</h6>
+            <p style="font-size: 14px" id="homeSize"></p>
+        </div>
+         
+         
+     </div>
+     
+     <div class="row" style="border-top: 1px solid rgba(0, 0, 0, 0.19)">
+        <div class="col-sm-2" style="margin-top: 30px">
+            <i class="fas fa-calendar" style="color: #FED136"></i>
+        </div>
+        
+        <div class="col-sm-10" style="margin-top: 20px">
+            <h6>Date:</h6>
+            <p style="font-size: 14px" id="movingDate"></p>
+        </div>
+         
+         
+     </div>
+     
+     <div class="row" style="border-top: 1px solid rgba(0, 0, 0, 0.19)">
+        <div class="col-sm-2" style="margin-top: 30px">
+            <i class="fas fa-envelope" style="color: #FED136"></i>
+        </div>
+        
+        <div class="col-sm-10" style="margin-top: 20px">
+            <h6>Contact:</h6>
+            <p style="font-size: 14px" id="name"> </p>
+                <p id="email"></p>
+          
+         </div>
+         
+         
+     </div>
+      </div>
+  </div>
+  <div class="col-lg-1 col-md-12"></div>
+  <div class="col-lg-7 col-md-12">
+      
+       <div class="row shadow-lg p-3 mb-5 bg-white rounded" >
+        
+         <div class="col-sm-3">
+          <img id="imageOne" width="100" >
+          </div>
+          
+          <div class="col-sm-3">
+          <h5 id="nameOne"></h5>
+          <p style="color: #FED136" id="ratingOne"></p>
+          </div>
+          
+          <div class="col-sm-3">
+          <h5>Pricing</h5>
+          <p id="priceOne"></p>
+          </div>
+          
+          <div class="col-sm-3">
+        <h5>Contact This Mover</h5>
+          <button style="font-size: 14px" class="btn  btn-primary" id="phoneNumberOne"></button>
+          </div>
+          
+      </div>
+      
+      <div class="row shadow-lg p-3 mb-5 bg-white rounded">
+        
+         <div class="col-sm-3">
+          <img id="imageTwo" width="100" >
+          </div>
+          
+          <div class="col-sm-3">
+          <h5 id="nameTwo"></h5>
+          <p style="color: #FED136" id="ratingTwo"></p>
+          </div>
+          
+          <div class="col-sm-3">
+          <h5>Pricing</h5>
+          <p id="priceTwo"></p>
+          </div>
+          
+          <div class="col-sm-3">
+        <h5>Contact This Mover</h5>
+          <button style="font-size: 14px" class="btn  btn-primary" id="phoneNumberTwo"></button>
+          </div>
+          
+      </div>
+      
+      <div class="row shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 50px">
+        
+         <div class="col-sm-3">
+          <img id="imageThree" width="100" >
+          </div>
+          
+          <div class="col-sm-3">
+          <h5 id="nameThree"></h5>
+          <p style="color: #FED136" id="ratingThree"></p>
+          </div>
+          
+          <div class="col-sm-3">
+          <h5>Pricing</h5>
+          <p id="priceThree"></p>
+          </div>
+          
+          <div class="col-sm-3">
+        <h5>Contact This Mover</h5>
+          <button style="font-size: 14px" class="btn  btn-primary" id="phoneNumberThree"></button>
+          </div>
+          
+      </div>
+      
+      <div class="row shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 50px">
+        
+         <div class="col-sm-3">
+          <img id="imageFour" width="100" >
+          </div>
+          
+          <div class="col-sm-3">
+          <h5 id="nameFour"></h5>
+          <p style="color: #FED136" id="ratingFour"></p>
+          </div>
+          
+          <div class="col-sm-3">
+          <h5>Pricing</h5>
+          <p id="priceFour"></p>
+          </div>
+          
+          <div class="col-sm-3">
+        <h5>Contact This Mover</h5>
+          <button style="font-size: 14px" class="btn  btn-primary" id="phoneNumberFour"></button>
+          </div>
+          
+      </div>
+      
+      <div class="row shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 50px">
+        
+         <div class="col-sm-3">
+          <img id="imageFive" width="100" >
+          </div>
+          
+          <div class="col-sm-3">
+          <h5  id="nameFive"></h5>
+          <p  style="color: #FED136" id="ratingFive"></p>
+          </div>
+          
+          <div class="col-sm-3">
+          <h5>Pricing</h5>
+          <p id="priceFive"></p>
+          </div>
+          
+          <div class="col-sm-3">
+        <h5>Contact This Mover</h5>
+          <button style="font-size: 14px" class="btn  btn-primary" id="phoneNumberFive"></button>
+          </div>
+          
+      </div>
+    </div>
+
+    
+    
+    
+    </div>
+  
+  
+  </div>
+ 
+<!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/results.js"></script>
+ 
+
+
+  </body>
+
+</html>
