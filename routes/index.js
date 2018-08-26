@@ -6,13 +6,13 @@ module.exports = {
        var nodemailer = require('nodemailer');
  
 const client = yelp.client(process.env.YELP);
- 
+ console.log('test1')
 client.search({
   term:'moving company',
   location: req.body.fromLocation,
     attributes: 'request_a_quote'
 }).then(response => {
- 
+ console.log('test2')
     response.jsonBody.businesses.sort((a, b) => (a.rating) - (b.rating)).reverse().length = 5;
     
     
