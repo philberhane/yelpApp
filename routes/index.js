@@ -79,7 +79,7 @@ jwtClient.authorize(function (err, tokens) {
 let sheets = google.sheets('v4');
      
     sheets.spreadsheets.values.append({
-      spreadsheetId: '1fYpp-7l8lnRThH5AEQFW4J7-thC6OEI68e56iccOgjs',
+      spreadsheetId: process.env.SHEET,
       range: 'A2',
       valueInputOption: 'RAW',
       insertDataOption: 'INSERT_ROWS',
@@ -101,14 +101,15 @@ let sheets = google.sheets('v4');
     port: 465,
     secure: true,
   auth: {
-    user: 'philberhane7@gmail.com',
-    pass: 'Habteab1'
+    user: process.env.EMAIL,
+    pass: process.env.PASS
   }
 });
         
 
 var mailOptions = {
-  from: 'Phil',
+  from: 
+process.env.EMAIL,
   to: formInfo.email,
   subject: "Welcome Jon!",
   html: '<style>#body{overflow-x: hidden; font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}#body{background-color: #BFDCFF; text-align: center}#h1{text-align: center;}#header button{background-color: #5F6EFF; color: white; border: none; padding: 10px 50px; border: 5%; font-weight: bold;}#companies div{margin-top: 25px;}#companies button{background-color: #FED136; color: white; border: none; padding: 10px 50px; border: 5%; font-weight: bold;}</style> <div id="body" > <div class="container"> <div id="header"> <h1 id="h1">Hello ' + formInfo.name + '</h1> <p >Feel free to contact any of the listed companies to ask questions or to book your move date.</p><button>Use code ' +formInfo.code+ '</button> </div><div id="companies"> <div id="divOne"> <img src="' +response.jsonBody.businesses[0].image_url+ '" width="300"> <h4>' +response.jsonBody.businesses[0].name+ '</h4> <button>' +response.jsonBody.businesses[0].phone+ '</button> </div><div id="divTwo"> <img src="' +response.jsonBody.businesses[1].image_url+ '" width="300"> <h4>' +response.jsonBody.businesses[1].name+ '</h4> <button>' +response.jsonBody.businesses[1].phone+ '</button> </div><div id="divThree"> <img src="' +response.jsonBody.businesses[2].image_url+ '" width="300"> <h4>' +response.jsonBody.businesses[2].name+ '</h4> <button>' +response.jsonBody.businesses[2].phone+ '</button> </div><div id="divFour"> <img src="' +response.jsonBody.businesses[3].image_url+ '" width="300"> <h4>' +response.jsonBody.businesses[3].name+ '</h4> <button>' +response.jsonBody.businesses[3].phone+ '</button> </div><div id="divFive"> <img src="' +response.jsonBody.businesses[4].image_url+ '" width="300"> <h4>' +response.jsonBody.businesses[4].name+ '</h4> <button>' +response.jsonBody.businesses[4].phone+ '</button> </div></div></div></div>'
