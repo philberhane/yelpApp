@@ -1,13 +1,13 @@
 const dotenv = require('dotenv').config();
-const express = require('express')
-const errorhandler = require('errorhandler')
-const logger = require('morgan')
-const bodyParser = require('body-parser')
-const cors = require('cors')
-const routes = require('./routes')
-const path = require('path')
+const express = require('express');
+const errorhandler = require('errorhandler');
+const logger = require('morgan');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const routes = require('./routes');
+const path = require('path');
 var nodemailer = require('nodemailer');
-var fs=require('fs');
+var fs = require('fs');
 
 
 

@@ -71,7 +71,7 @@ function submit() {
     
     
 
-    fetch('http://localhost:3000/yelpSearch', {
+    fetch('https://yelp-app-api.herokuapp.com/yelpSearch', {
         method: 'POST',
         body: JSON.stringify(inputValue),
         headers: { "Content-Type": "application/json"}
