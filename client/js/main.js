@@ -80,12 +80,14 @@ function submit() {
         return response.json();
     }).then(function(data) {
         
-        if (data.message === 'Error') {
+        
+        
+        if (data.message.indexOf('Error') === 0) {
              document.querySelector('.loader').style.display = 'none'
             
             document.getElementById('errorMessage').innerText = data.message
             
-            errorMessage.style.color = '#FED136'
+            document.getElementById('errorMessage').style.color = '#fe4536'
         } else {
         
         console.log(data.message)

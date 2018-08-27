@@ -27,7 +27,6 @@ module.exports = {
 			message: 'Error: ' + errors[0].msg
 		});
 	}
-       return 
        const yelp = require('yelp-fusion');
        var nodemailer = require('nodemailer');
        
