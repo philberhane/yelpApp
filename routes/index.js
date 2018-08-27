@@ -1,16 +1,13 @@
 module.exports = {
     
    yelpSearch(req, res) {
-       
-       var formInfo = {
-        fromLocation: req.body.fromLocation,
-        toLocation: req.body.toLocation,
-        homeSize: req.body.homeSize,
-        name: req.body.name,
-        email: req.body.email,
-        movingDate : req.body.movingDate,
-        code: Math.floor(Math.random()*90000) + 100000
-    };
+      var fromLocation = req.body.fromLocation
+      var toLocation = req.body.toLocation 
+      var homeSize: req.body.homeSize
+      var name= req.body.name
+      var email= req.body.email
+      var movingDate : req.body.movingDate
+      
        console.log('test1')
        	// Validation
 	req.checkBody('name', 'Name is required!').notEmpty();
@@ -32,6 +29,16 @@ module.exports = {
        return 
        const yelp = require('yelp-fusion');
        var nodemailer = require('nodemailer');
+       
+       var formInfo = {
+        fromLocation: req.body.fromLocation,
+        toLocation: req.body.toLocation,
+        homeSize: req.body.homeSize,
+        name: req.body.name,
+        email: req.body.email,
+        movingDate : req.body.movingDate,
+        code: Math.floor(Math.random()*90000) + 100000
+    };
  
 const client = yelp.client(process.env.YELP);
 
