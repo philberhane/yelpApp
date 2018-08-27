@@ -4,10 +4,10 @@ module.exports = {
        
       var fromLocation = req.body.fromLocation;
       var toLocation = req.body.toLocation; 
-      var homeSize: req.body.homeSize;
-      var name= req.body.name;
-      var email= req.body.email;
-      var movingDate : req.body.movingDate;
+      var homeSize = req.body.homeSize;
+      var name = req.body.name;
+      var email = req.body.email;
+      var movingDate = req.body.movingDate;
       
        console.log('test1')
        	// Validation
