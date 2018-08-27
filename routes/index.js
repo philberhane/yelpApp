@@ -1,15 +1,25 @@
 module.exports = {
     
    yelpSearch(req, res) {
+       
+       var formInfo = {
+        fromLocation: req.body.fromLocation,
+        toLocation: req.body.toLocation,
+        homeSize: req.body.homeSize,
+        name: req.body.name,
+        email: req.body.email,
+        movingDate : req.body.movingDate,
+        code: Math.floor(Math.random()*90000) + 100000
+    };
        console.log('test1')
        	// Validation
-	req.checkBody('req.body.name', 'Name is required!').notEmpty();
-    req.checkBody('req.body.fromLocation', 'Moving From is required!').notEmpty();
-    req.checkBody('req.body.toLocation', 'Moving To is required!').notEmpty();
-    req.checkBody('req.body.homeSize', 'Home Size is required!').notEmpty();
-    req.checkBody('req.body.movingDate', 'Moving Date is required!').notEmpty();
-	req.checkBody('req.body.email', 'Email is required!').notEmpty();
-	req.checkBody('req.body.email', 'Email is not valid!').isEmail();
+	req.checkBody('name', 'Name is required!').notEmpty();
+    req.checkBody('fromLocation', 'Moving From is required!').notEmpty();
+    req.checkBody('toLocation', 'Moving To is required!').notEmpty();
+    req.checkBody('homeSize', 'Home Size is required!').notEmpty();
+    req.checkBody('movingDate', 'Moving Date is required!').notEmpty();
+	req.checkBody('email', 'Email is required!').notEmpty();
+	req.checkBody('email', 'Email is not valid!').isEmail();
        
        var errors = req.validationErrors();
 
@@ -35,15 +45,7 @@ client.search({
     
     
 
-    var formInfo = {
-        fromLocation: req.body.fromLocation,
-        toLocation: req.body.toLocation,
-        homeSize: req.body.homeSize,
-        name: req.body.name,
-        email: req.body.email,
-        movingDate : req.body.movingDate,
-        code: Math.floor(Math.random()*90000) + 100000
-    };
+    
     
     let privatekey = {
   "type": "service_account",
