@@ -2,6 +2,24 @@ module.exports = {
     
    yelpSearch(req, res) {
        
+       	// Validation
+	req.checkBody('req.body.name', 'Name is required!').notEmpty();
+    req.checkBody('req.body.fromLocation', 'Moving From is required!').notEmpty();
+    req.checkBody('req.body.toLocation', 'Moving To is required!').notEmpty();
+    req.checkBody('req.body.homeSize', 'Home Size is required!').notEmpty();
+    req.checkBody('req.body.movingDate', 'Moving Date is required!').notEmpty();
+	req.checkBody('req.body.email', 'Email is required!').notEmpty();
+	req.checkBody('req.body.email', 'Email is not valid!').isEmail();
+       
+       var errors = req.validationErrors();
+
+	if (errors) {
+        console.log(errors)
+		res.status(500).send({
+			message: 'Error: ' + errors[0].msg
+		});
+	}
+       
        const yelp = require('yelp-fusion');
        var nodemailer = require('nodemailer');
  

@@ -59,6 +59,7 @@ function initMap() {
 
 
 function submit() {
+    document.querySelector('.loader').style.display = 'block'
 
     var inputValue = {
         fromLocation : document.getElementById('input').value ,
@@ -66,7 +67,7 @@ function submit() {
         homeSize : document.getElementById('homeSize').value,
         name : document.getElementById('name').value,
         email : document.getElementById('email').value,
-        movingDate : document.getElementById('movingDate').value
+        movingDate : document.getElementById('dtp_input2').value
     }
     
     
@@ -78,12 +79,21 @@ function submit() {
     }).then(function(response) {
         return response.json();
     }).then(function(data) {
+        
+        if (data.message === 'Error') {
+             document.querySelector('.loader').style.display = 'none'
+            
+            document.getElementById('errorMessage').innerText = data.message
+            
+            errorMessage.style.color = '#FED136'
+        } else {
+        
         console.log(data.message)
         console.log(data.info)
         sessionStorage.info = JSON.stringify(data.info)
         sessionStorage.data = JSON.stringify(data.message)
       window.location.href = 'results.html'
-       
+        }
 
     })
 }

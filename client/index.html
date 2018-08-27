@@ -23,6 +23,8 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
 
+    <link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
   </head>
 
   <body id="page-top">
@@ -88,10 +90,13 @@ Quotes from Local Movers.</div>
                <option >5 Bedroom+</option>
            </select>
            
-           <div class="input-group" style="margin-top: 15px">
-           <span class="input-group-addon" style="background-color: white; padding-left: 10px;"><i class="fas fa-calendar " style="color: black; margin-top: 10px;"></i></span>
-           <input class="form-control" placeholder="Moving Date" style="border: none;" id="movingDate" >
-              </div>
+           
+            
+                <div class="input-group date form_date " data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" style="margin-top: 25px;">
+                   <span class="input-group-addon" style="background-color: white; padding-left: 10px;"><i class="fas fa-calendar " style="color: black; margin-top: 10px;"></i></span>
+                    <input style="border: none" class="form-control input-group-addon" id = "dtp_input2" type="date" placeholder="Moving Date" >
+                    
+                </div>
            
            <div class="row">
            <div class="input-group col-md-6" style="margin-top: 15px ">
@@ -104,6 +109,12 @@ Quotes from Local Movers.</div>
                </div>
              <button style="margin-top: 15px" onclick="submit()" class="btn btn-block btn-lg btn-primary">GET QUOTE</button>
               </div>
+              <div class="row">
+              <div class="col-sm-4"></div>
+              <div class="col-sm-4"><div class="loader"></div></div>
+              
+              </div>
+              <p id="errorMessage"></p>
           </div>
         </div>
         
@@ -118,34 +129,34 @@ Quotes from Local Movers.</div>
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Process</h2>
+            <h3 class="section-subheading text-muted">Our 3-step process is simple</h3>
           </div>
         </div>
         <div class="row text-center">
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+              <i class="fas fa-align-justify fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">E-Commerce</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <h4 class="service-heading"></h4>
+            <p class="text-muted">Simply fill out the short form above, with information such as where you're moving from and to.</p>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+              <i class="fas fa-star fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">Responsive Design</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <h4 class="service-heading"></h4>
+            <p class="text-muted">Our system then searches for the highest rated moving companies in your area and displays the results.</p>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+              <i class="fas fa-truck fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">Web Security</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <h4 class="service-heading"></h4>
+            <p class="text-muted">Contact these high rated moving companies and move into your new home effortlessly!</p>
           </div>
         </div>
       </div>
@@ -454,10 +465,31 @@ Quotes from Local Movers.</div>
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase" style="color:black">Contact Us</h2>
+            <h3 class="section-subheading text-muted">Feel free to contact us if you have any questions.</h3>
           </div>
         </div>
+        <div class="row">
+             <div class="col-sm-12 col-md-6 col-lg-6 my-5">
+               <div >
+                  <div class="card-body text-center">
+                    <i class="fa fa-phone fa-5x mb-3" aria-hidden="true"></i>
+                    <h4 class="text-uppercase mb-5">call us</h4>
+                    <p>+8801683615582</p>
+                  </div>
+                </div>
+             </div>
+             <div class="col-sm-12 col-md-6 col-lg-6 my-5">
+               <div class="">
+                  <div class="card-body text-center">
+                    <i class="fa fa-envelope fa-5x mb-3" aria-hidden="true"></i>
+                    <h4 class="text-uppercase mb-5">email</h4>
+                   <p>movingcompany@gmail.com</p>
+                  </div>
+                </div>
+             </div>
+             
+             
       <!--  <div class="row">
           <div class="col-lg-12">
             <form id="contactForm" name="sentMessage" novalidate="novalidate">
@@ -492,16 +524,18 @@ Quotes from Local Movers.</div>
           </div>
         </div>-->
       </div>
+        </div>
+        
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer style = "background-color: rgb(191, 220, 255);">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Your Website 2018</span>
+            <span class="copyright">Copyright &copy; Moving Company 2018</span>
           </div>
-          <div class="col-md-4">
+          <!--<div class="col-md-4">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -529,7 +563,7 @@ Quotes from Local Movers.</div>
                 <a href="#">Terms of Use</a>
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </footer>
@@ -740,6 +774,24 @@ Quotes from Local Movers.</div>
       </div>
     </div>
     <div class="col-md-6 col-sm-12" id="map" style="display: none"></div>
+    
+    <script type="text/javascript" src="./jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+<script type="text/javascript">
+   $('.form_date').datetimepicker({
+        language:  'en',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	
+</script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
