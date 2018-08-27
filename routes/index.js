@@ -1,7 +1,7 @@
 module.exports = {
     
    yelpSearch(req, res) {
-       
+       console.log('test1')
        	// Validation
 	req.checkBody('req.body.name', 'Name is required!').notEmpty();
     req.checkBody('req.body.fromLocation', 'Moving From is required!').notEmpty();
@@ -19,18 +19,18 @@ module.exports = {
 			message: 'Error: ' + errors[0].msg
 		});
 	}
-       
+       return 
        const yelp = require('yelp-fusion');
        var nodemailer = require('nodemailer');
  
 const client = yelp.client(process.env.YELP);
- console.log('test1')
+
 client.search({
   term:'moving company',
   location: req.body.fromLocation,
     attributes: 'request_a_quote'
 }).then(response => {
- console.log('test2')
+
     response.jsonBody.businesses.sort((a, b) => (a.rating) - (b.rating)).reverse().length = 5;
     
     
