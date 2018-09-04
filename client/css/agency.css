@@ -9,6 +9,14 @@ body {
   font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+#userCode {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-weight: 700;
+    padding-left: 10px;
+    border-radius: 10px;
+
+}
+
 .loader {
   display: none;
   border: 16px solid #f3f3f3;
@@ -590,6 +598,14 @@ header.masthead .intro-text .intro-heading {
 @media (max-width: 766px) {
     #wholeThing {
         margin-top: 25px
+    }
+}
+
+@media (max-width: 575px) {
+    #userCode {
+     padding-left: 5px;
+        padding-right: 5px;
+        
     }
 }
 

@@ -1,5 +1,11 @@
 module.exports = {
     
+    /*For nodemaler, I have to:
+    1) Go on the gmail and enable less secure apps
+    2) Go to https://accounts.google.com/b/0/DisplayUnlockCaptcha and allow access
+    
+    */
+    
    yelpSearch(req, res) {
        
       var fromLocation = req.body.fromLocation;
@@ -128,8 +134,8 @@ let sheets = google.sheets('v4');
     port: 465,
     secure: true,
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASS
+    user: 'movingcompanyemailer@gmail.com',
+    pass: 'MovingCompany1!'
   }
 });
         
