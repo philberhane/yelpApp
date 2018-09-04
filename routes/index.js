@@ -43,7 +43,8 @@ module.exports = {
         name: req.body.name,
         email: req.body.email,
         movingDate : req.body.movingDate,
-        code: Math.floor(Math.random()*90000) + 100000
+        code: Math.floor(Math.random()*90000) + 100000,
+        reason: req.body.reason
     };
  
 const client = yelp.client(process.env.YELP);
@@ -118,7 +119,7 @@ let sheets = google.sheets('v4');
       insertDataOption: 'INSERT_ROWS',
       resource: {
         values: [
-          [new Date().toISOString(), formInfo.name, formInfo.email, formInfo.movingDate, formInfo.homeSize, formInfo.fromLocation, formInfo.toLocation, formInfo.code]
+          [new Date().toISOString(), formInfo.name, formInfo.email, formInfo.movingDate, formInfo.homeSize, formInfo.fromLocation, formInfo.toLocation, formInfo.code, formInfo.reason]
         ],
       },
       auth: jwtClient

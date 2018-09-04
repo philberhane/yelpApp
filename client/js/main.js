@@ -67,7 +67,8 @@ function submit() {
         homeSize : document.getElementById('homeSize').value,
         name : document.getElementById('name').value,
         email : document.getElementById('email').value,
-        movingDate : document.getElementById('dtp_input2').value
+        movingDate : document.getElementById('dtp_input2').value,
+        reason: document.getElementById('reason').value
     }
     
     
