@@ -133,8 +133,9 @@ let sheets = google.sheets('v4');
      var thirdRating;
     var fourthRating;
      var fifthRating;
-    
-    for (i=0; i<response.jsonBody.businesses[0].rating; i++) {
+    console.log('dope')
+    console.log(response.jsonBody.businesses[0].rating)
+  /*  for (i=0; i<response.jsonBody.businesses[0].rating; i++) {
         firstRating += '<img src="http://i64.tinypic.com/xoi24n.png" style="width: 2%">'
     }
     for (i=0; i<response.jsonBody.businesses[1].rating; i++) {
@@ -148,7 +149,7 @@ let sheets = google.sheets('v4');
     }
     for (i=0; i<response.jsonBody.businesses[4].rating; i++) {
         fifthRating += '<img src="http://i64.tinypic.com/xoi24n.png" style="width: 2%">'
-    }
+    }*/
     
     
      var transporter = nodemailer.createTransport({
