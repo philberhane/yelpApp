@@ -64,11 +64,10 @@
                 <div id="header">
                     <h1 id="h1">Hello ' + formInfo.name + '</h1>
                     <p >Feel free to contact any of the listed companies to ask questions or to book your move date.</p>
-                    <p id="userCode" class="" style="background-color: rgba(0, 0, 255, 0.5); color: white; font-size: 16px; width: 100%; text-align: center">Use code ' +formInfo.code+ '</p>
+                    <p id="userCode" class="" style="background-color: rgba(0, 0, 255, 0.5); color: white; font-size: 16px; width: 50%; margin: 0 auto">Use code ' +formInfo.code+ '</p>
                 </div>
                 <div id="companies">
-                
-                <div class="div" id="divOne">
+                <div class="div" id="divOne" >
                     <img src="" width="300">
                     <h4>' +response.jsonBody.businesses[0].name+ '</h4>
                     <p>' +firstRating+ '</p>
