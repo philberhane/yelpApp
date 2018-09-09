@@ -39,29 +39,30 @@
   
   <div class="row" id="wholeThing">
   
-  <div class="col-lg-4 col-md-12" id="small-p">
-    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+  <div class="col-lg-4 col-md-12 firstDiv" id="small-p" style="width: 100%">
+    <div class="shadow-lg p-3 mb-5 bg-white rounded niice">
      
       <h4 >Your Details</h4>
      <div class="row" style="margin-top: 25px; border-top: 1px solid rgba(0, 0, 0, 0.19)">
-        <div class="col-sm-2" style="margin-top: 30px">
+        <div class="col-sm-2 mar2" style="margin-top: 30px">
             <i class="fas fa-truck" style="color: #FED136"></i>
         </div>
         
-        <div class="col-sm-10" style="margin-top: 20px">
+        <div class="col-sm-10 mar1" style="margin-top: 20px">
             <h6>Pickup Location:</h6>
             <p style="font-size: 14px" id="fromLocation"></p>
         </div>
          
          
+         
      </div>
      
      <div class="row" style="border-top: 1px solid rgba(0, 0, 0, 0.19)">
-        <div class="col-sm-2" style="margin-top: 30px">
+        <div class="col-sm-2 mar2" style="margin-top: 30px">
             <i class="fas fa-truck" style="color: #FED136"></i>
         </div>
         
-        <div class="col-sm-10" style="margin-top: 20px">
+        <div class="col-sm-10 mar1" style="margin-top: 20px">
             <h6>Drop-off Location:</h6>
             <p style="font-size: 14px" id="toLocation"></p>
         </div>
@@ -70,11 +71,11 @@
      </div>
      
      <div class="row" style="border-top: 1px solid rgba(0, 0, 0, 0.19)">
-        <div class="col-sm-2" style="margin-top: 30px">
+        <div class="col-sm-2 mar2" style="margin-top: 30px">
             <i class="fas fa-home" style="color: #FED136"></i>
         </div>
         
-        <div class="col-sm-10" style="margin-top: 20px">
+        <div class="col-sm-10 mar1" style="margin-top: 20px">
             <h6>Bedrooms:</h6>
             <p style="font-size: 14px" id="homeSize"></p>
         </div>
@@ -83,11 +84,11 @@
      </div>
      
      <div class="row" style="border-top: 1px solid rgba(0, 0, 0, 0.19)">
-        <div class="col-sm-2" style="margin-top: 30px">
+        <div class="col-sm-2 mar2" style="margin-top: 30px">
             <i class="fas fa-calendar" style="color: #FED136"></i>
         </div>
         
-        <div class="col-sm-10" style="margin-top: 20px">
+        <div class="col-sm-10 mar1" style="margin-top: 20px">
             <h6>Date:</h6>
             <p style="font-size: 14px" id="movingDate"></p>
         </div>
@@ -96,11 +97,11 @@
      </div>
      
      <div class="row" style="border-top: 1px solid rgba(0, 0, 0, 0.19)">
-        <div class="col-sm-2" style="margin-top: 30px">
+        <div class="col-sm-2 mar2" style="margin-top: 30px">
             <i class="fas fa-envelope" style="color: #FED136"></i>
         </div>
         
-        <div class="col-sm-10" style="margin-top: 20px">
+        <div class="col-sm-10 mar1" style="margin-top: 20px">
             <h6>Contact:</h6>
             <p style="font-size: 14px" id="name"> </p>
                 <p id="email"></p>
@@ -111,11 +112,11 @@
      </div>
       </div>
   </div>
-  <div class="col-lg-1 col-md-12"></div>
-  <div class="col-lg-7 col-md-12">
+  <div class="col-lg-1 col-md-12 secondDiv"></div>
+  <div class="col-lg-7 col-md-12 thirdDiv" id="companyResult">
       
-       <div class="row shadow-lg p-3 mb-5 bg-white rounded" >
-        
+       <div class="row shadow-lg p-3 mb-5 bg-white rounded companyResult" >
+   <!--     <div class="row"> -->
          <div class="col-sm-3">
           <img id="imageOne" width="100" >
           </div>
@@ -125,19 +126,20 @@
           <p style="color: #FED136" id="ratingOne"></p>
           </div>
           
+          
           <div class="col-sm-3">
-          <h5>Pricing</h5>
+          <h5 class="pricingh5">Pricing</h5>
           <p id="priceOne"></p>
           </div>
           
           <div class="col-sm-3">
-        <h5>Contact This Mover</h5>
+        <h5 class="contacth5">Contact This Mover</h5>
           <button style="font-size: 14px" class="btn  btn-primary" id="phoneNumberOne"></button>
           </div>
           
       </div>
       
-      <div class="row shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="row shadow-lg p-3 mb-5 bg-white rounded companyResult">
         
          <div class="col-sm-3">
           <img id="imageTwo" width="100" >
@@ -149,18 +151,18 @@
           </div>
           
           <div class="col-sm-3">
-          <h5>Pricing</h5>
+          <h5 class="pricingh5">Pricing</h5>
           <p id="priceTwo"></p>
           </div>
           
           <div class="col-sm-3">
-        <h5>Contact This Mover</h5>
+        <h5 class="contacth5">Contact This Mover</h5>
           <button style="font-size: 14px" class="btn  btn-primary" id="phoneNumberTwo"></button>
           </div>
           
       </div>
       
-      <div class="row shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 50px">
+      <div class="row shadow-lg p-3 mb-5 bg-white rounded companyResult" style="margin-top: 50px">
         
          <div class="col-sm-3">
           <img id="imageThree" width="100" >
@@ -172,18 +174,18 @@
           </div>
           
           <div class="col-sm-3">
-          <h5>Pricing</h5>
+          <h5 class="pricingh5">Pricing</h5>
           <p id="priceThree"></p>
           </div>
           
           <div class="col-sm-3">
-        <h5>Contact This Mover</h5>
+        <h5 class="contacth5">Contact This Mover</h5>
           <button style="font-size: 14px" class="btn  btn-primary" id="phoneNumberThree"></button>
           </div>
           
       </div>
       
-      <div class="row shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 50px">
+      <div class="row shadow-lg p-3 mb-5 bg-white rounded companyResult" style="margin-top: 50px">
         
          <div class="col-sm-3">
           <img id="imageFour" width="100" >
@@ -195,18 +197,18 @@
           </div>
           
           <div class="col-sm-3">
-          <h5>Pricing</h5>
+          <h5 class="pricingh5">Pricing</h5>
           <p id="priceFour"></p>
           </div>
           
           <div class="col-sm-3">
-        <h5>Contact This Mover</h5>
+        <h5 class="contacth5">Contact This Mover</h5>
           <button style="font-size: 14px" class="btn  btn-primary" id="phoneNumberFour"></button>
           </div>
           
       </div>
       
-      <div class="row shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 50px">
+      <div class="row shadow-lg p-3 mb-5 bg-white rounded companyResult" style="margin-top: 50px">
         
          <div class="col-sm-3">
           <img id="imageFive" width="100" >
@@ -218,12 +220,12 @@
           </div>
           
           <div class="col-sm-3">
-          <h5>Pricing</h5>
+          <h5 class="pricingh5">Pricing</h5>
           <p id="priceFive"></p>
           </div>
           
           <div class="col-sm-3">
-        <h5>Contact This Mover</h5>
+        <h5 class="contacth5">Contact This Mover</h5>
           <button style="font-size: 14px" class="btn  btn-primary" id="phoneNumberFive"></button>
           </div>
           
