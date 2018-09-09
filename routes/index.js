@@ -128,28 +128,6 @@ let sheets = google.sheets('v4');
     })
     
     
-    var firstRating;
-    var secondRating;
-     var thirdRating;
-    var fourthRating;
-     var fifthRating;
-    console.log('dope')
-    console.log(response.jsonBody.businesses[0].rating)
-  /*  for (i=0; i<response.jsonBody.businesses[0].rating; i++) {
-        firstRating += '<img src="http://i64.tinypic.com/xoi24n.png" style="width: 2%">'
-    }
-    for (i=0; i<response.jsonBody.businesses[1].rating; i++) {
-        secondRating += '<img src="http://i64.tinypic.com/xoi24n.png" style="width: 2%">'
-    }
-    for (i=0; i<response.jsonBody.businesses[2].rating; i++) {
-        thirdRating += '<img src="http://i64.tinypic.com/xoi24n.png" style="width: 2%">'
-    }
-    for (i=0; i<response.jsonBody.businesses[3].rating; i++) {
-        fourthRating += '<img src="http://i64.tinypic.com/xoi24n.png" style="width: 2%">'
-    }
-    for (i=0; i<response.jsonBody.businesses[4].rating; i++) {
-        fifthRating += '<img src="http://i64.tinypic.com/xoi24n.png" style="width: 2%">'
-    }*/
     
     
      var transporter = nodemailer.createTransport({
@@ -168,7 +146,7 @@ var mailOptions = {
 process.env.EMAIL,
   to: formInfo.email,
   subject: "Welcome "+formInfo.name+"!",
-  html: '<style>#body{overflow-x: hidden; font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}#body{background-color: #BFDCFF; text-align: center}#h1{text-align: center;}#header button{background-color: #5F6EFF; color: white; border: none; padding: 10px 50px; border: 5%; font-weight: bold;}#companies div{margin-top: 25px;}#companies button{background-color: #FED136; color: white; border: none; padding: 10px 50px; border: 5%; font-weight: bold;}#userCode{font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-weight: 700; padding-left: 10px; border-radius: 10px;}.div{background-color: white; padding-bottom: 15px}button{border-radius: 7px;}</style> <div id="body" > <div class="container"> <div id="header"> <h1 id="h1">Hello ' + formInfo.name + '</h1> <p >Feel free to contact any of the listed companies to ask questions or to book your move date.</p><p id="userCode" class="" style="background-color: rgba(0, 0, 255, 0.5); color: white; font-size: 16px; width: 100%; text-align: center">Use code ' +formInfo.code+ '</p></div><div id="companies"> <div class="div" id="divOne"> <img src="" width="300"> <h4>' +response.jsonBody.businesses[0].name+ '</h4> <p>' +'firstRating'+ '</p><button>' +response.jsonBody.businesses[0].phone+ '</button> </div><div class="div" id="divTwo"> <img src="" width="300"> <h4>' +response.jsonBody.businesses[1].name+ '</h4> <p>' +'secondRating'+ '</p><button>' +response.jsonBody.businesses[1].phone+ '</button> </div><div class="div" id="divThree"> <img src="" width="300"> <h4>' +response.jsonBody.businesses[2].name+ '</h4> <p>' +'thirdRating'+ '</p><button>' +response.jsonBody.businesses[2].phone+ '</button> </div><div class="div" id="divFour"> <img src="" width="300"> <h4>' +response.jsonBody.businesses[3].name+ '</h4> <p>' +'fourthRating'+ '</p><button>' +response.jsonBody.businesses[3].phone+ '</button> </div><div class="div" id="divFive"> <img src="" width="300"> <h4>' +response.jsonBody.businesses[4].name+ '</h4> <p>' +'fifthRating'+ '</p><button>' +response.jsonBody.businesses[4].phone+ '</button> </div></div><div> Your details </div></div></div>'
+  html: '<style>#body{overflow-x: hidden; font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}#body{background-color: #BFDCFF; text-align: center}#h1{text-align: center;}#header button{background-color: #5F6EFF; color: white; border: none; padding: 10px 50px; border: 5%; font-weight: bold;}#companies div{margin-top: 25px;}#companies button{background-color: #FED136; color: white; border: none; padding: 10px 50px; border: 5%; font-weight: bold;}</style> <div id="body" > <div class="container"> <div id="header"> <h1 id="h1">Hello ' + formInfo.name + '</h1> <p >Feel free to contact any of the listed companies to ask questions or to book your move date.</p><button>Use code ' +formInfo.code+ '</button> </div><div id="companies"> <div id="divOne"> <img src="' +response.jsonBody.businesses[0].image_url+ '" width="300"> <h4>' +response.jsonBody.businesses[0].name+ '</h4> <button>' +response.jsonBody.businesses[0].phone+ '</button> </div><div id="divTwo"> <img src="' +response.jsonBody.businesses[1].image_url+ '" width="300"> <h4>' +response.jsonBody.businesses[1].name+ '</h4> <button>' +response.jsonBody.businesses[1].phone+ '</button> </div><div id="divThree"> <img src="' +response.jsonBody.businesses[2].image_url+ '" width="300"> <h4>' +response.jsonBody.businesses[2].name+ '</h4> <button>' +response.jsonBody.businesses[2].phone+ '</button> </div><div id="divFour"> <img src="' +response.jsonBody.businesses[3].image_url+ '" width="300"> <h4>' +response.jsonBody.businesses[3].name+ '</h4> <button>' +response.jsonBody.businesses[3].phone+ '</button> </div><div id="divFive"> <img src="' +response.jsonBody.businesses[4].image_url+ '" width="300"> <h4>' +response.jsonBody.businesses[4].name+ '</h4> <button>' +response.jsonBody.businesses[4].phone+ '</button> </div></div></div></div>'
 };
         transporter.sendMail(mailOptions, function(error, info){
   if (error) {
