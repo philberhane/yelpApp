@@ -21,13 +21,13 @@ document.getElementById('ratingOne').innerHTML += '<i class="fas fa-star"></i> '
 
 document.getElementById('phoneNumberOne').innerText = JSON.parse(sessionStorage.data)[0].phone
 
-if (!JSON.parse(sessionStorage.data)[0].price) {
+/*if (!JSON.parse(sessionStorage.data)[0].price) {
     document.getElementById('priceOne').innerText = 'N/A'
     
 } else {
     document.getElementById('priceOne').innerText = JSON.parse(sessionStorage.data)[0].price
     
-}
+}*/
 
 
 
@@ -49,13 +49,14 @@ document.getElementById('ratingTwo').innerHTML += '<i class="fas fa-star"></i> '
 
 document.getElementById('phoneNumberTwo').innerText = JSON.parse(sessionStorage.data)[1].phone
 
+/*
 if (!JSON.parse(sessionStorage.data)[1].price) {
     document.getElementById('priceTwo').innerText = 'N/A'
     
 } else {
     document.getElementById('priceTwo').innerText = JSON.parse(sessionStorage.data)[1].price
 }
-
+*/
 
 
 
@@ -75,13 +76,14 @@ document.getElementById('ratingThree').innerHTML += '<i class="fas fa-star"></i>
 
 document.getElementById('phoneNumberThree').innerText = JSON.parse(sessionStorage.data)[2].phone
 
+/*
 if (!JSON.parse(sessionStorage.data)[2].price) {
     document.getElementById('priceThree').innerText = 'N/A'
     
 } else {
     document.getElementById('priceThree').innerText = JSON.parse(sessionStorage.data)[2].price
 }
-
+*/
 
 
 document.getElementById('imageFour').src = JSON.parse(sessionStorage.data)[3].image_url
@@ -100,13 +102,14 @@ document.getElementById('ratingFour').innerHTML += '<i class="fas fa-star"></i> 
 
 document.getElementById('phoneNumberFour').innerText = JSON.parse(sessionStorage.data)[3].phone
 
+/*
 if (!JSON.parse(sessionStorage.data)[3].price) {
     document.getElementById('priceFour').innerText = 'N/A'
     
 } else {
     document.getElementById('priceFour').innerText = JSON.parse(sessionStorage.data)[3].price
 }
-
+*/
 
 
 document.getElementById('imageFive').src = JSON.parse(sessionStorage.data)[4].image_url
@@ -125,13 +128,14 @@ document.getElementById('ratingFive').innerHTML += '<i class="fas fa-star"></i> 
 
 document.getElementById('phoneNumberFive').innerText = JSON.parse(sessionStorage.data)[4].phone
 
+/*
 if (!JSON.parse(sessionStorage.data)[4].price) {
     document.getElementById('priceFive').innerText = 'N/A'
     
 } else {
     document.getElementById('priceFive').innerText = JSON.parse(sessionStorage.data)[4].price
 }
-
+*/
 
 document.getElementById('fromLocation').innerText = JSON.parse(sessionStorage.info).fromLocation
 
@@ -150,6 +154,7 @@ document.getElementById("headerStatement").innerText = "Hello " + JSON.parse(ses
 
 var priceArrayElements = document.querySelectorAll('.pricingh5')
 
+/*
 if ($(window).width() <= 767) {
     for (i=0;i<priceArrayElements.length;i++) {
         if (priceArrayElements[i].nextElementSibling.innerText === 'N/A') {
@@ -175,7 +180,7 @@ if ($(window).width() <= 767) {
   }
 
 });
-
+*/
 
 
 
