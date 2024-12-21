@@ -17,13 +17,13 @@ module.exports = {
       
        console.log('test1')
        	// Validation
-	req.checkBody('name', 'Name is required!').notEmpty();
-    req.checkBody('fromLocation', 'Moving From is required!').notEmpty();
-    req.checkBody('toLocation', 'Moving To is required!').notEmpty();
-    req.checkBody('homeSize', 'Home Size is required!').notEmpty();
-    req.checkBody('movingDate', 'Moving Date is required!').notEmpty();
-	req.checkBody('email', 'Email is required!').notEmpty();
-	req.checkBody('email', 'Email is not valid!').isEmail();
+	req.checkBody(name, 'Name is required!').notEmpty();
+    req.checkBody(fromLocation, 'Moving From is required!').notEmpty();
+    req.checkBody(toLocation, 'Moving To is required!').notEmpty();
+    req.checkBody(homeSize, 'Home Size is required!').notEmpty();
+    req.checkBody(movingDate, 'Moving Date is required!').notEmpty();
+	req.checkBody(email, 'Email is required!').notEmpty();
+	req.checkBody(email, 'Email is not valid!').isEmail();
        
        var errors = req.validationErrors();
 
